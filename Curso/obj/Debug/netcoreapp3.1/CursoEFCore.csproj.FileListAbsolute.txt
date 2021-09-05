@@ -1,0 +1,4 @@
+C:\Users\pc-cantelli\Documents\Programação 2018\EF Core\desenvolvedor.io\basico\Curso\obj\Debug\netcoreapp3.1\CursoEFCore.csproj.AssemblyReference.cache
+C:\Users\pc-cantelli\Documents\Programação 2018\EF Core\desenvolvedor.io\basico\Curso\obj\Debug\netcoreapp3.1\CursoEFCore.AssemblyInfoInputs.cache
+C:\Users\pc-cantelli\Documents\Programação 2018\EF Core\desenvolvedor.io\basico\Curso\obj\Debug\netcoreapp3.1\CursoEFCore.AssemblyInfo.cs
+C:\Users\pc-cantelli\Documents\Programação 2018\EF Core\desenvolvedor.io\basico\Curso\obj\Debug\netcoreapp3.1\CursoEFCore.csproj.CoreCompileInputs.cache
