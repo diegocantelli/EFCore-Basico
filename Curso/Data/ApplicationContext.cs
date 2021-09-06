@@ -8,7 +8,10 @@ namespace Curso.Data
     {
         //Definindo a classe Pedido como modelo de dados, o EF Core irá criar também as classes
         // na qual ela depende
-        // public DbSet<Pedido> Pedidos { get; set; }
+        public DbSet<Pedido> Pedidos { get; set; }
+        public DbSet<Produto> Produtos { get; set; }
+        public DbSet<Cliente> Clientes { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Data source=(localdb)\\mssqllocaldb;Initial Catalog=CursoEFCore; Integrated Security=true");
