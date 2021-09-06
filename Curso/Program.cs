@@ -20,6 +20,16 @@ namespace CursoEFCore
             ConsultarPedidoCarregamentoAdiantado();
         }
 
+        private static void RemoverRegistro()
+        {
+            using var db = new ApplicationContext();
+            var cliente = db.Clientes.Find(1);
+            // db.Clientes.Remove(cliente);
+            // db.Remove(cliente);
+            db.Entry(cliente).State = EntityState.Deleted;
+            db.SaveChanges();
+        }
+
         private static void ConsultarPedidoCarregamentoAdiantado()
         {
             using var db = new ApplicationContext();
