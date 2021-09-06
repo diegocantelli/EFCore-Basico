@@ -17,6 +17,25 @@ namespace CursoEFCore
             InserirDadosEmMassa();
         }
 
+        private static void ConsultarDados()
+        {
+            using var db = new ApplicationContext();
+            var clientes = db.Clientes.Where(x => x.Id > 0).ToList();
+
+            // Desta forma os objetos não serão rastreados pelo EF e o método Find não
+            // irá conseguir encontrar os registros na variável clientes
+            // var clientes = db.Clientes.AsNoTracking().Where(x => x.Id > 0).ToList();
+
+            foreach (var cliente in clientes)
+            {
+                // O método find é o único que faz uso da consulta em memória primeiro 
+                // para depois ir buscar no BD
+                // Como a variável clientes é resultado de uma consulta sem usar "AsNoTracking", o comando
+                // Find irá encontrar o objeto em memória e não precisará efetuar uma consulta ao BD
+                db.Clientes.Find(cliente.Id);
+            }
+        }
+
         private static void InserirDadosEmMassa()
         {
             var produto = new Produto
